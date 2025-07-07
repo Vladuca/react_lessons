@@ -1,6 +1,9 @@
+
+import './Main.css';
+
 function Main(){
     return(
-        <div className="Main">5</div>
+        <div className="Main">15</div>
     )
 }
 
