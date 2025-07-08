@@ -2,7 +2,7 @@ import Header from'../Header/Header';
 import Foother from'../Foother/Foother';
 import './App.css';
 import Main from '../Main/Main';
-import Sidebar from '..Sidebar/Sidebar';
+import Sidebar from '../sidebar/Sidebar';
 
 
 
