@@ -14,3 +14,11 @@ export const ways = [
     },
 ]
 
+export const difference = {
+    way: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde consequatur temporibus iusto maxime facilis recusandae. Inventore sit dolorem in exercitationem sint nisi quod, nam consequatur.`,
+
+    easy: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.`,
+
+    program: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consectetur omnis itaque eaque. Doloremque reprehenderit reiciendis consectetur voluptatem, commodi dolor.`,
+};
+
