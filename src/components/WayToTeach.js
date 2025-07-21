@@ -1,7 +1,7 @@
 function WayToTeach({title, discription, id}){
     return(
         <li>
-            <p><strong>{title}</strong> {discription}, <h1>{id}</h1></p>
+            <p><strong>{title}</strong> {discription}, </p>
         </li>
     )
 };

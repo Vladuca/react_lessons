@@ -9,11 +9,12 @@ import { useState } from "react";
 
 
 export default function App(){
-    const [content, setContent] = useState('Нажми на кнопку');
+    const [contentType, setContentType] = useState(null);
    
     function handeClick(type){
-        setContent(type);
+        setContentType(type); 
     }
+
     return(
         <div>
             <Header />
@@ -21,16 +22,18 @@ export default function App(){
                 <section>
                     <h3>Наш подход к обучению</h3>
                     <ul>
-                        <WayToTeach {...ways[1]}/>
-                        <WayToTeach {...ways[1]}/>
+                        {ways.map((way)=><WayToTeach key ={way.title} {...way}/>)}
                     </ul>
-                </section>
-                <Button onClick={()=>handeClick('ways')}>Подход</Button>
-                <Button onClick={()=>handeClick('easy')}>Доступность</Button>
-                <Button onClick={()=>handeClick('program')}>Концентрация</Button>
                 
+                <Button isActive={contentType === 'way'} onClick={()=>handeClick('way')}>Подход</Button>
+                <Button isActive={contentType === 'easy'} onClick={()=>handeClick('easy')}>Доступность</Button>
+                <Button isActive={contentType === 'program'} onClick={()=>handeClick('program')}>Концентрация</Button>
+                {!contentType && <p>Нажми на кнопку</p>}
+                {contentType && <p>{difference[contentType]}</p>}
+                </section>
             </main>
-            <p>{content}</p>
+
+          
         </div>
     )
 }
